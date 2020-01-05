@@ -13,9 +13,9 @@ const MealItem = props => {
                     </ImageBackground>
                     </View>
                     <View style={{...styles.mealRow, ...styles.mealDetail}}>
-                        <Text>{props.duration}m</Text>
-                        <Text>{props.complexity.toUpperCase()}</Text>
-                        <Text>{props.affordability.toUpperCase()}</Text>
+                        <Text style = {{fontFamily : 'open-sans-bold'}}>{props.duration}m</Text>
+                        <Text style = {{fontFamily : 'open-sans-bold'}}>{props.complexity.toUpperCase()}</Text>
+                        <Text style = {{fontFamily : 'open-sans-bold'}}>{props.affordability.toUpperCase()}</Text>
 
                     </View>
                 </View>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     bgImage : {
         width : '100%',
         height : '100%',
-        justifyContent : 'flex-end'
+        justifyContent : 'flex-end',
     },
     mealItem: {
         height : 200,

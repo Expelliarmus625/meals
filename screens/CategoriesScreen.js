@@ -3,7 +3,8 @@ import { FlatList, View, Text, StyleSheet, Button, TouchableOpacity } from 'reac
 import {CATEGORIES} from '../data/dummy-data';
 import Colors from '../constants/Colors';
 import CategoryGridTile from '../components/CategoryGridTile';
-
+import { HeaderButtons, Item} from 'react-navigation-header-buttons';
+import HeaderFavBtn from '../components/HeaderFavBtn';
 const CategoriesScreen = props => {
     
 
@@ -39,4 +40,12 @@ const styles = StyleSheet.create({
     
 });
 
+CategoriesScreen.navigationOptions = navData => {
+    return {
+        headerTitle : 'Categories',
+        headerLeft :() =>  <HeaderButtons HeaderButtonComponent = {HeaderFavBtn}>
+                <Item Title = "Menu" iconName = "ios-menu" onPress= {()=> {navData.navigation.toggleDrawer();}}></Item>
+            </HeaderButtons>
+    };
+};
 export default CategoriesScreen;
