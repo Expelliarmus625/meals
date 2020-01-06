@@ -16,7 +16,6 @@ const MealItem = props => {
                         <Text style = {{fontFamily : 'open-sans-bold'}}>{props.duration}m</Text>
                         <Text style = {{fontFamily : 'open-sans-bold'}}>{props.complexity.toUpperCase()}</Text>
                         <Text style = {{fontFamily : 'open-sans-bold'}}>{props.affordability.toUpperCase()}</Text>
-
                     </View>
                 </View>
             </TouchableNativeFeedback>
